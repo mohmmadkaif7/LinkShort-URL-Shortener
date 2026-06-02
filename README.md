@@ -1,36 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LinkShort - URL Shortener 🔗
 
-## Getting Started
+## 📌 Description
 
-First, run the development server:
+LinkShort is a URL shortening web application built using Next.js, MongoDB, and Tailwind CSS.
+
+The application allows users to generate short and shareable links without requiring authentication. Users can also create custom short URLs and send messages through a contact form that stores submissions in MongoDB.
+
+---
+
+## 🚀 Features
+
+* Shorten long URLs instantly
+* Create custom short links
+* Fast redirection using dynamic routes
+* Contact form with MongoDB storage
+* Privacy-focused (no analytics or tracking)
+* Responsive user interface
+* Modern yellow-themed design
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js (App Router)
+* React
+* Tailwind CSS
+
+### Backend
+
+* Next.js API Routes
+* Node.js
+
+### Database
+
+* MongoDB (Native Driver)
+
+---
+
+## 📂 Functionalities Implemented
+
+* URL shortening system
+* Custom slug generation
+* Dynamic route handling
+* MongoDB integration
+* Form handling and validation
+* Contact message storage
+* Responsive navigation
+
+---
+
+## 📷 Screenshots
+
+### Home Page
+
+![Home](screenshots/home.png)
+
+### URL Shortener
+
+![Shortener](screenshots/shortener.png)
+
+
+### Contact Page
+
+![Contact](screenshots/contact.png)
+
+### About Page
+
+![About](screenshots/about.png)
+
+---
+
+## ▶️ How to Run
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/linkshort.git
+```
+
+### Navigate to Project
+
+```bash
+cd linkshort
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Create Environment Variables
+
+Create a file named:
+
+```text
+.env.local
+```
+
+Add:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+LINKSHORT/
+│
+├── app/
+│   ├── [shorturl]/
+│   ├── about/
+│   ├── api/
+│   │   ├── contact/
+│   │   └── generate/
+│   ├── contact/
+│   ├── shorten/
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+│
+├── components/
+│   └── Navbar.js
+│
+├── data/
+│
+├── lib/
+│   └── mongodb.js
+│
+├── public/
+│
+├── package.json
+├── README.md
+└── .gitignore
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Future Improvements
 
-## Deploy on Vercel
+* QR code generation
+* User authentication
+* Link expiration support
+* Link management dashboard
+* Click analytics
+* Custom domains
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Author
+
+Mohmmad Kaif 
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a star on GitHub.
