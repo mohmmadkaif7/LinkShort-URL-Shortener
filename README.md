@@ -77,7 +77,7 @@ The application allows users to generate short and shareable links without requi
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/linkshort.git
+git clone https://github.com/mohmmadkaif7/LinkShort-URL-Shortener.git
 ```
 
 ### Navigate to Project

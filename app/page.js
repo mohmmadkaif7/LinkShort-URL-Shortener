@@ -14,13 +14,15 @@ export default function Home() {
             We are the most straightfoward URL Shortener in the world. Most of the url shorteners will track you or ask you to give your details for login. We understand your needs and hence we have created this URL shortener
           </p>
           <div className='flex gap-3 justify-start mt-5'>
-          <Link href="/shorten"><button className='bg-yellow-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>Try Now</button></Link>
-          <Link href="/github"><button className='bg-yellow-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>GitHub</button></Link>
+            <Link href="/shorten"><button className='bg-yellow-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>Try Now</button></Link>
+            <Link href="/github"><button className='bg-yellow-500 rounded-lg shadow-lg p-3 py-1 font-bold text-white'>GitHub</button></Link>
+          </div>
         </div>
-        </div>
-        <div className=" flex justify-start relative">
-          <Image className="mix-blend-darken" alt="an Image of a vector" src={"/vector.jpg"} fill={true}    />
-        </div>
+        <img
+          src="https://img.magnific.com/free-vector/hand-drawn-busy-office-illustration_23-2151084554.jpg?semt=ais_hybrid&w=740&q=80"
+          alt="an Image of a vector"
+          className="mix-blend-darken w-full h-full object-cover"
+        />
 
       </section>
     </main>
