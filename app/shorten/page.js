@@ -7,6 +7,19 @@ const Shorten = () => {
     const [shorturl, setshortulr] = useState("")
     const [generated, setgenerated] = useState("")
 
+    const [copied, setCopied] = useState(false);
+
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(generated);
+            setCopied(true);
+
+           
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     const generate = () => {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -65,9 +78,30 @@ const Shorten = () => {
                     <button onClick={generate} className='bg-yellow-500 w-2/5 rounded-lg shadow-md px-3 py-1 font-bold text-white'>Generate</button>
                 </div>
                 <div>
-                    {generated && <><span className="font-bold text-lg">Your link</span>
-                    <div><code><Link target="_blank" href={generated}>{generated}</Link></code>
-                    </div></>}
+                    {generated && (
+                        <>
+                            <span className="font-bold text-lg">Your Link</span>
+
+                            <div className="mt-2 flex items-center gap-3 justify-center-safe">
+                                <code className="bg-yellow-50 px-7 mx-2 py-1  rounded break-all">
+                                    <Link
+                                        href={generated}
+                                        target="_blank"
+                                        className="text-blue-600 hover:underline"
+                                    >
+                                        {generated}
+                                    </Link>
+                                </code>
+
+                                <button
+                                    onClick={copyToClipboard}
+                                    className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-m font-semibold"
+                                >
+                                    {copied ? "Copied!" : "Copy"}
+                                </button>
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
         </div>
